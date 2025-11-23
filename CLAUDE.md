@@ -8,7 +8,7 @@ curl --globoff "https://stats-api.mlssoccer.com/matches/seasons/MLS-SEA-0001KA?m
   -H "User-Agent: curl"
 ```
 
-Starting at 2026-02-16, increment the calls by 7 days, effectively getting one week at a time. Save the JSON repsonse in the data directory with the filename pattern week-N.json where N is the number of the week. There are only 34 weeks in the 2026 MLS season and the last date with games will be 2026-11-07.
+Starting at 2026-02-16, increment the calls by 7 days, effectively getting one week at a time. Save the JSON repsonse in the data directory with the filename pattern week-N.json where N is the number of the week. There are only 34 weeks in the 2026 MLS season and the last date with games will be 2026-11-07. There will be weeks with no matches, so be sure to go all the way until 2026-11-07 in your requests for game data.
 
 Once we have collected the data for every week in JSON format, we will process that data to generate a CSV. The CSV will have the following headers:
 Match Week, Match Date, Home Team, Away Team, Game Time
